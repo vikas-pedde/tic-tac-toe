@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic metadata and responsive settings for the Tic-Tac-Toe page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tic-tac -toe</title>
+    <title>Tic-Tac-Toe</title>
+    <!-- External stylesheet for layout and visual styles -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Overlay message shown when the game ends; 'hide' keeps it invisible until toggled by JS -->
     <div class="message hide">
+        <!-- Dynamic message text (e.g., "X wins", "O wins", or "Draw") updated by script.js -->
         <p id="msg">Winner</p>
+        <!-- Button to start a fresh game from the overlay -->
         <button id="new-game">NEW GAME</button>
     </div>
+
+    <!-- Main application area containing title, board, and controls -->
     <main>
     <h1>TIC-TAC-TOE</h1>
+
+    <!-- Container to center and size the game board -->
     <div class="container">
+    <!-- 3x3 grid for the Tic-Tac-Toe board; each .box is a clickable cell controlled by script.js -->
     <div class="game">
+        <!-- Nine interactive cells; text/content (X/O) is set via JS -->
         <button class="box"></button>
         <button class="box"></button>
         <button class="box"></button>
@@ -26,8 +37,12 @@
         <button class="box"></button>
     </div>
     </div>
+
+    <!-- Resets the current game state from the main view -->
     <button id="reset-button"> Reset Game</button>
     </main>
+
+    <!-- Game logic and interactions (event handlers, turn tracking, win detection) -->
     <script src="script.js"></script>
 </body>
 </html>
